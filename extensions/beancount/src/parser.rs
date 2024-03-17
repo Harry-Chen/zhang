@@ -612,7 +612,7 @@ pub fn parse(input_str: &str, file: impl Into<Option<PathBuf>>) -> Result<Vec<Sp
     let inputs = BeancountParer::parse(Rule::entry, input_str)?;
     let input = inputs.single()?;
     BeancountParer::entry(input).map(|mut directives| {
-        directives.iter_mut().for_each(|directive| directive.span.filename = file.clone());
+        directives.iter_mut().for_each(|directive| directive.span.filename.clone_from(&file));
         directives
     })
 }
