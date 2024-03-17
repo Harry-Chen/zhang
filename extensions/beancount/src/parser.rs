@@ -687,9 +687,10 @@ mod test {
         }
     }
     mod txn {
-        use crate::parser::parse;
         use indoc::indoc;
         use zhang_ast::Directive;
+
+        use crate::parser::parse;
 
         #[test]
         fn should_parse_posting_meta() {
@@ -740,11 +741,12 @@ mod test {
         }
     }
     mod budget {
-        use crate::parser::parse;
         use bigdecimal::{BigDecimal, One};
         use indoc::indoc;
         use zhang_ast::amount::Amount;
         use zhang_ast::Directive;
+
+        use crate::parser::parse;
 
         #[test]
         fn should_parse_budget_without_meta() {
@@ -854,9 +856,10 @@ mod test {
     }
     mod single_line_item {
         mod options {
-            use crate::parser::parse;
             use indoc::indoc;
             use zhang_ast::Directive;
+
+            use crate::parser::parse;
 
             #[test]
             fn should_parse() {
@@ -902,9 +905,10 @@ mod test {
         }
 
         mod open {
-            use crate::parser::parse;
             use indoc::indoc;
             use zhang_ast::Directive;
+
+            use crate::parser::parse;
 
             #[test]
             fn should_parse_with_booking_method() {
